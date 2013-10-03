@@ -1,0 +1,20 @@
+{
+  "name": "calc.guido.vc",
+  "version": "0.0.0",
+  "homepage": "https://github.com/guidobouman/calc.guido.vc",
+  "authors": [
+    "Guido Bouman <m@guido.vc>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  }
+}
