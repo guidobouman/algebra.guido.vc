@@ -1,4 +1,8 @@
+/* - Get the lovely Ubuntu font - */
+
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+
+/* - Ultra basic reset - */
 
 * {
   -moz-box-sizing           : border-box;
@@ -8,10 +12,11 @@
 html, body {
   margin                    : 0;
   padding                   : 0;
-  height                    : 100%;
 }
 
-body {
+/* - Font declarations - */
+
+body, input, textarea, button {
   font-family               : Ubuntu, sans-serif;
   font-weight               : 300;
   font-size                 : 24px;
@@ -19,6 +24,7 @@ body {
 
 h1,
 h2 {
+  margin                    : 0;
   font-weight               : inherit;
   font-size                 : 300%;
 }
@@ -27,12 +33,128 @@ h2 {
   font-size                 : 100%;
 }
 
+/* - Layout setup - */
+
+body {
+  padding                   : 4em
+}
+
+header,
+section,
+footer {
+  margin                    : 0 auto;
+  max-width                 : 800px;
+}
+
 header {
-  color                     : #888888;
+  padding-top               : 2em;
+  color                     : #aaaaaa;
 }
 
 header h1,
 header h2 {
   display                   : inline;
   color                     : #000000;
+}
+
+section {
+  overflow                  : hidden;
+  padding-top               : 2em;
+}
+
+section h1 {
+  padding                   : 0 0 0.2em;
+  color                     : #aaaaaa;
+}
+
+label,
+input[type="text"] {
+  display: block;
+}
+
+label.checkbox {
+  margin-bottom             : 1em;
+}
+
+input[type="text"],
+button,
+textarea {
+  padding                   : 12px 15px;
+  border                    : 1px solid #aaaaaa;
+  border-radius             : 5px;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+button:hover,
+button:focus,
+textarea:hover,
+textarea:focus {
+  outline                   : none;
+  border-color              : #666666;
+  box-shadow                : 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+input[type="text"] {
+  width                     : 100%;
+}
+
+button {
+  margin                    : 1em 0 0;
+  float                     : right;
+  border                    : none;
+  background                : #999999;
+  color                     : #ffffff;
+  cursor                    : pointer;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background                : #666666;
+}
+
+textarea {
+  height                    : 300px;
+  width                     : 46%;
+  float                     : left;
+}
+
+textarea#results {
+  float                     : right;
+}
+
+footer {
+  padding-top               : 2em;
+  color                     : #aaaaaa;
+}
+
+@media screen and (max-width: 650px) {
+  body, input, textarea, button {
+    font-size               : 20px;
+  }
+
+  button, textarea {
+    width                   : 100%;
+  }
+
+  textarea + textarea {
+    margin-top              : 1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body, input, textarea, button {
+    font-size               : 16px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    padding                 : 2em;
+  }
+  
+  header h1 {
+    display                 : block;
+  }
 }
