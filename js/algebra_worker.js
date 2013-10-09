@@ -1,4 +1,4 @@
-importScripts('/bower_components/mathjs/dist/math.min.js');
+importScripts('math.min.js');
 
 onmessage = function(e) {
 
