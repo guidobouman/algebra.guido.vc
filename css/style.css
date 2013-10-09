@@ -33,6 +33,10 @@ h2 {
   font-size                 : 100%;
 }
 
+a {
+  color                     : inherit;
+}
+
 /* - Layout setup - */
 
 body {
