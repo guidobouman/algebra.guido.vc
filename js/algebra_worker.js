@@ -9,12 +9,12 @@ onmessage = function(e) {
 
 var algebra = {
 
-  calculate: function(digits, digits_once, operators, operators_once, desired_result, max_length) {
+  calculate: function(digits, digits_once, operators, operators_once, desired_result) {
 
     this.log('Starting calculations...');
 
     this.desired_result = desired_result;
-    this.max_length     = max_length;
+    this.max_length     = digits.length;
 
     this.run_digits(digits, digits_once, operators, operators_once, []);
 
@@ -30,7 +30,7 @@ var algebra = {
       return;
     }
 
-    if(math.floor(current.length / 2) > this.max_length) {
+    if(math.floor(current.length / 2) >= this.max_length) {
       return;
     }
 

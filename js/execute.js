@@ -24,7 +24,6 @@ jQuery(function() {
     operators       = $('input#operators').val().replace(/ /g, '').split(',');
     operators_once  = $('input#operators_once').is(':checked');
     desired_result  = $('input#desired_result').val();
-    max_length      = $('input#max_length').val() || 10;
 
     worker.postMessage({
       cmd: 'calculate',
@@ -33,8 +32,7 @@ jQuery(function() {
         digits_once,
         operators,
         operators_once,
-        desired_result,
-        max_length
+        desired_result
       ]
     });
   });
