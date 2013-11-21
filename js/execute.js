@@ -56,4 +56,4 @@ var log = function(message, textarea) {
   textarea.append(message);
   textarea.scrollTop(textarea[0].scrollHeight);
 
-}
+};
